@@ -40,7 +40,7 @@ class ContactForm extends Component {
         </label>
         <label className={css.label_style}>
           <span className={css.label_distance}> Number</span>
-         
+
           <input
             className={css.input_style}
             type="tel"
@@ -52,7 +52,9 @@ class ContactForm extends Component {
             required
           />
         </label>
-        <button className={css.button_add} type="submit">Add contact</button>
+        <button className={css.button_add} type="submit">
+          Add contact
+        </button>
       </form>
     );
   }
