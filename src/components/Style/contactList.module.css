@@ -1,0 +1,18 @@
+.container {
+    width: 500px;
+    margin-top: 30px;
+}
+
+.boxList {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+}
+
+.button_delete {
+    margin: 10px;
+    background-color: rgb(221, 100, 100);
+    border-radius: 4px;
+
+
+}
