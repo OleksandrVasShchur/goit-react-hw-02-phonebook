@@ -17,11 +17,10 @@ export class App extends Component {
     filter: '',
   };
 
-  formSubmitDate = data => {
-    const searchSameName = this.state.contacts
-      .map(contact => contact.name)
-      .includes(data.name);
+  addContact = data => {
 
+    const searchSameName = this.state.contacts.some(contact => contact.name.toLowerCase() === data.name.toLowerCase())
+   
     if (searchSameName) {
       alert(`${data.name} is already in contacts`);
     } else {
@@ -33,7 +32,6 @@ export class App extends Component {
       this.setState(prevState => ({
         contacts: [...prevState.contacts, newContact],
       }));
-      console.log(this.state);
     }
   };
 
@@ -62,7 +60,7 @@ export class App extends Component {
     return (
       <div className={css.total_box}>
         <h1>Phonebook</h1>
-        <ContactForm submitDate={this.formSubmitDate} />
+        <ContactForm submitDate={this.addContact} />
 
         <h2>Contacts</h2>
 
